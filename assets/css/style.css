@@ -1,12 +1,51 @@
 body {
-  font-family: "ABCRepro-Medium", Helvetica, Arial, sans-serif;
+  
+  filter: blur(70%);
+  font-family:"Rewir-Light";
+  font-weight: 900;
+  font-size: 13pt;
+  background-color:beige; 
+}
+
+.arrow2{
+  position:absolute;
+  top: 40px;
+  left:40px;
+  
+}
+
+.arrow{
+  height: 50px;
+  width: 70px;
+}
+
+.container {
+  width: 37%;
+  margin: 50px auto;
+  background-color: beige;
+  border: 5px solid rgb(150, 87, 47);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.frame {
+  border: 1px solid beige;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+p{
+  text-align:center;
+  color:rgb(150, 87, 47);
+  font-style: italic ;
 }
 
 h1 {
 text-align:center;
+color:rgb(150, 87, 47);
+
 }
-
-
 
 .pad{
   padding-left:100px;
@@ -21,6 +60,7 @@ text-align:center;
   grid-template-rows:repeat(12, minmax(100px,1fr));
   grid-auto-flow: rows;
   gap: 20px;
+  
 }
 
 img {
@@ -38,18 +78,18 @@ img {
 }
 
 .planet{
-  grid-row-start:2;
+  grid-row-start:1;
   grid-row-end:5;  
-  grid-column-start:7;
-  grid-column-end:10;
+  grid-column-start:6;
+  grid-column-end:12;
 
 }
 
 .skull{
-  grid-row-start:1;
-  grid-row-end:2; 
-  grid-column-start:9;
-  grid-column-end:10; 
+  grid-row-start:13;
+  grid-row-end:15;  
+  grid-column-start:3;
+  grid-column-end:4; 
 }
 
 .bean{
@@ -60,39 +100,39 @@ img {
 }
 
 .QR{
-  grid-row-start:9;
-  grid-row-end:10;  
-  grid-column-start:8;
-  grid-column-end:9; 
+  grid-row-start:10;
+  grid-row-end:13;  
+  grid-column-start:1;
+  grid-column-end:3; 
 }
 
 .stones{
-  grid-row-start:11;
-  grid-row-end:12; 
-  grid-column-start:9;
-  grid-column-end:10; 
+  grid-row-start:19;
+  grid-row-end:21; 
+  grid-column-start:1;
+  grid-column-end:5; 
 }
 
 .fog{
-  grid-row-start:7;
-  grid-row-end:8; 
-  grid-column-start:9;
-  grid-column-end:10; 
+  grid-row-start:8;
+  grid-row-end:11; 
+  grid-column-start:6;
+  grid-column-end:9; 
 }
 
 
 .globus{
   grid-row-start:8;
   grid-row-end:9; 
-  grid-column-start:2;
-  grid-column-end:3; 
+  grid-column-start:5;
+  grid-column-end:7; 
 }
 
 .potato{
-  grid-row-start:9;
-  grid-row-end:10;  
-  grid-column-start:9;
-  grid-column-end:10;
+  grid-row-start:13;
+  grid-row-end:18;  
+  grid-column-start:5;
+  grid-column-end:12;
 }
 
 /* Definitions positioned */
@@ -101,17 +141,29 @@ img {
  .def1{
   opacity: 0;
   color:rgb(150, 87, 47);
-  font-style: italic;
+  font-style: italic ;
   position: absolute;
-  top: 140px;
+  top: 180px;
   left: 0;
- } 
+} 
 
 .meduza:hover .def1 {
   opacity: 1;
+  transform: scale(100%);
+  transition-duration: 2s;
+  transition-delay: 0.2;
 }
+
 .meduza:hover img {
   opacity: 0;
+  
+}
+.meduza .def1 {
+  transition-duration: 1s; 
+}
+
+.meduza img {
+  transition-duration: 1s; 
 }
 
 .def2{
@@ -119,15 +171,26 @@ img {
   color:rgb(150, 87, 47);
   font-style: italic;
   position: absolute;
-  top: 250px;
+  top: 490px;
   left: 800px;
  } 
 
 .planet:hover .def2 {
   opacity: 1;
-}
+  transform: scale(100%);
+  transition-duration: 0.2s;
+  }
+
 .planet:hover img {
   opacity: 0;
+}
+
+.planet .def2 {
+  transition-duration: 1s; 
+}
+
+.planet img {
+  transition-duration: 1s; 
 }
 
 .def3{
@@ -135,15 +198,25 @@ img {
   color:rgb(150, 87, 47);
   font-style: italic;
   position: absolute;
-  top: 430px;
+  top: 2880px;
   left: 250px;
  } 
 
 .skull:hover .def3 {
   opacity: 1;
+  transform: scale(100%);
+  transition-duration: 0.2s;
 }
 .skull:hover img {
   opacity: 0;
+}
+
+.skull .def3 {
+  transition-duration: 1s; 
+}
+
+.skull img {
+  transition-duration: 1s; 
 }
 
 .def4{
@@ -151,15 +224,25 @@ img {
   color:rgb(150, 87, 47);
   font-style: italic;
   position:absolute;
-  top: 700px;
-  left: 800px;
+  top: 1050px;
+  left: 300px;
  } 
 
 .bean:hover .def4 {
   opacity: 1;
+  transform: scale(100%);
+  transition-duration: 0.2s;
 }
 .bean:hover img {
   opacity: 0;
+}
+
+.bean .def4 {
+  transition-duration: 1s; 
+}
+
+.bean img {
+  transition-duration: 1s; 
 }
 
 .def5{
@@ -167,15 +250,24 @@ img {
   color:rgb(150, 87, 47);
   font-style: italic;
   position: absolute;
-  top: 800px;
-  left: 200px;
+  top: 2450px;
+  left: 60px;
  } 
 
 .QR:hover .def5 {
   opacity: 1;
+  transform: scale(100%);
+  transition-duration: 0.2s;
 }
 .QR:hover img {
   opacity: 0;
+}
+.QR .def5 {
+  transition-duration: 1s; 
+}
+
+.QR img {
+  transition-duration: 1s; 
 }
 
 .def6{
@@ -183,15 +275,24 @@ img {
   color:rgb(150, 87, 47);
   font-style: italic;
   position: absolute;
-  top: 1200px;
-  left: 900px;
+  top: 1900px;
+  left: 790px;
  } 
 
 .fog:hover .def6 {
   opacity: 1;
+  transform: scale(100%);
+  transition-duration: 0.2s;
 }
 .fog:hover img {
   opacity: 0;
+}
+.fog .def6 {
+  transition-duration: 1s; 
+}
+
+.fog img {
+  transition-duration: 1s; 
 }
 
 .def7{
@@ -199,15 +300,24 @@ img {
   color:rgb(150, 87, 47);
   font-style: italic;
   position: absolute;
-  top: 800px;
-  left: 800px;
+  top: 1750px;
+  left: 550px;
  } 
 
 .globus:hover .def7 {
   opacity: 1;
+  transform: scale(100%);
+  transition-duration: 0.2s;
 }
 .globus:hover img {
   opacity: 0;
+}
+.globus .de7 {
+  transition-duration: 1s; 
+}
+
+.globus img {
+  transition-duration: 1s; 
 }
 
 .def8{
@@ -215,15 +325,24 @@ img {
   color:rgb(150, 87, 47);
   font-style: italic;
   position: absolute;
-  top: 800px;
-  left: 800px;
+  top: 3100px;
+  left: 700px;
  } 
 
 .potato:hover .def8 {
   opacity: 1;
+  transform: scale(100%);
+  transition-duration: 0.2s;
 }
 .potato:hover img {
   opacity: 0;
+}
+.potato .def8 {
+  transition-duration: 1s; 
+}
+
+.potato img {
+  transition-duration: 1s; 
 }
 
 .def9{
@@ -231,30 +350,36 @@ img {
   color:rgb(150, 87, 47);
   font-style: italic;
   position: absolute;
-  top: 1500px;
-  left: 800px;
+  top: 3550px;
+  left: 200px;
  } 
 
 .stones:hover .def9 {
   opacity: 1;
+  transform: scale(100%);
+  transition-duration: 0.2s;1
 }
 .stones:hover img {
   opacity: 0;
 }
+.stones .def9 {
+  transition-duration: 1s; 
+}
 
+.stones img {
+  transition-duration: 1s; 
+}
 
 /* Quotes on the page */
 
 .quote1{
   color: rgb(150, 87, 47);
-  font-size: small;
   font-style: italic;
 }
 .quote1{
-  grid-row-start:2;
-  grid-row-end:3;  
-  grid-column-start:1;
-  grid-column-end:2; 
+  position:absolute;
+  top: 300px;
+  left: 430px;
   align-items:left;
   /* filter:blur(8px);
   transition-duration: 0.3s; */
@@ -266,36 +391,57 @@ img {
 
 .quote2{
   color: rgb(150, 87, 47);
-  font-size: small;
   font-style: italic;
-}
-.quote2{
-  grid-row-start:3;
-  grid-row-end:4;  
-  grid-column-start:3;
-  grid-column-end:4; 
+  position:absolute;
+  top: 950px;
+  left: 50px;
   align-items:left;
 }
 
+.quote3{
+  color: rgb(150, 87, 47);
+  font-style: italic;
+  position:absolute;
+  top: 1300px;
+  left: 500px;
+  align-items:left;
+}
 
+.quote4{
+  color: rgb(150, 87, 47);
+  font-style: italic;
+  position:absolute;
+  top: 1750px;
+  left: 820px;
+  align-items:left;
+}
 
+.quote5{
+  color: rgb(150, 87, 47);
+  font-style: italic;
+  position:absolute;
+  top: 2400px;
+  left: 350px;
+  align-items:left;
+}
 
+.quote6{
+  color: rgb(150, 87, 47);
+  font-style: italic;
+  position:absolute;
+  top: 3000px;
+  left: 550px;
+  align-items:left;
+}
 
-/* Hover effect */
-/* 1 */
-/* .QR:hover + .def1 {
-  opacity: 1;
-  grid-row-start:7;
-  grid-row-end: 8;  
-  grid-column-start:2;
-  grid-column-end:3;
-} */
-
-/* .QR:hover {
-  opacity: 0;
-} */
-
-/* 2  Quentin's solution */
+.quote7{
+  color: rgb(150, 87, 47);
+  font-style: italic;
+  position:absolute;
+  top: 3500px;
+  left: 850px;
+  align-items:left;
+}
 
 
 
